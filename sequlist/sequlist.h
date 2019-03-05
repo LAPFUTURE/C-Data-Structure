@@ -27,7 +27,8 @@ void inputfromfile(sequence_list *L,char *f){
 	L->size = 0;
 	if(fp){
 		while(!feof(fp)){
-			fscanf(fp,"%d",&L->a[L->size++]); 
+			fscanf(fp,"%d",&L->a[L->size]);
+			L->size++;
 		}
 		fclose(fp);
 	}
@@ -36,7 +37,7 @@ void inputfromfile(sequence_list *L,char *f){
 void print(sequence_list *L){
 	int i;
 	for(i = 0; i < L->size; i++){
-		printf("%5d",L->a[i]);
+		printf("%5d %5d",L->a[i],i);
 		if((i+1)%10 == 0){
 			printf("\n");
 		}
