@@ -8,7 +8,6 @@ void partion(sequence_list *L){
 	for(i = 0; i < L->size; i++){
 		if(i > temp1 || i >= (int)(L->size)/2)break;
 		if(L->a[i] %2 == 0){//Å¼Êýµ÷µ½ÓÒ±ß 
-		printf("%5d \n",L->a[i]);
 			for(j = temp1; j >= 0; j--){
 				if(L->a[j] %2 == 1){
 					temp1 = j-1;
