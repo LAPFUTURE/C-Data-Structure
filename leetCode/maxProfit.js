@@ -23,3 +23,18 @@ var maxProfit = function(prices) {
     }
     return max;
 };
+
+/**
+ * @param {number[]} prices
+ * @return {number}
+ */
+var maxProfit = function(prices) {
+    if(prices.length === 0 || prices.length === 1){return 0};
+    let profit = 0;
+    for(let i = 0; i < prices.length-1; i++){
+        if(prices[i+1] - prices[i] > 0){
+            profit += prices[i+1] - prices[i];
+        }
+    }
+    return profit;
+};
