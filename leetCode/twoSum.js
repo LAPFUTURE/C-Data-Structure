@@ -6,3 +6,11 @@ var twoSum = function(nums, target) {
                 };
             }
 };
+
+var twoSum2 = function(numbers, target) {
+    for(let i = 0, length = numbers.length; i < length;i++){
+            if(i < numbers.lastIndexOf(target-numbers[i])){
+                return [i+1,numbers.lastIndexOf(target-numbers[i])+1];
+            }
+        }
+};
